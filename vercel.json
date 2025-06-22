@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "name": "astracat-bench",
+  "builds": [
+    {
+      "src": "app/**/*.{js,ts,jsx,tsx}",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/download",
+      "dest": "/api/download",
+      "headers": {
+        "Cache-Control": "no-store"
+      }
+    },
+    {
+      "src": "/api/upload",
+      "dest": "/api/upload"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
