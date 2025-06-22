@@ -3,7 +3,7 @@
   "name": "astracat-bench",
   "builds": [
     {
-      "src": "app/**/*.{js,ts,jsx,tsx}",
+      "src": "package.json",
       "use": "@vercel/next"
     }
   ],
